@@ -25,7 +25,7 @@ class List extends Component {
     }
 
     render () {
-        const listItems = this.state.items.map(item => (
+        const listItems = this.state.items.map((item, index) => (
           <CSSTransition
             key={item}
             timeout={300}
