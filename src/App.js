@@ -23,10 +23,6 @@ class App extends Component {
     return (
       <div className="App">
         <h1>React Animations</h1>
-        <button
-          onClick={() => this.setState(
-            ({ isBlockDisplayed }) => ({ isBlockDisplayed: !isBlockDisplayed })
-          )}>Toggle</button>
         <Modal
           show={this.state.isModalOpen}
           closed={this.closeModal}
