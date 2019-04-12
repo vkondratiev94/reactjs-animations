@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Transition from 'react-transition-group/Transition'
 
 import "./App.css";
 import Modal from "./components/Modal/Modal";
@@ -28,23 +27,6 @@ class App extends Component {
           onClick={() => this.setState(
             ({ isBlockDisplayed }) => ({ isBlockDisplayed: !isBlockDisplayed })
           )}>Toggle</button>
-        <Transition
-          in={this.state.isBlockDisplayed}
-          timeout={1000}
-          mountOnEnter
-          unmountOnExit
-        >
-          {state => (
-            <div style={{
-              backgroundColor: 'red',
-              width: 100,
-              height: 100,
-              margin: 'auto',
-              transition: 'opacity 1s ease-out',
-              opacity: state === 'exiting' ? 0 : 1,
-            }}></div>
-          )}
-        </Transition>
         <Modal
           show={this.state.isModalOpen}
           closed={this.closeModal}
